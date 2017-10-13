@@ -491,7 +491,8 @@ void LCD_Init(void)
 	FMC_NORSRAM_TimingTypeDef FSMC_ReadWriteTim;
     FMC_NORSRAM_TimingTypeDef FSMC_WriteTim;
     
-    lcddev.id=LTDC_PanelID_Read();	//检查是否有RGB屏接入
+//    lcddev.id=LTDC_PanelID_Read();	//检查是否有RGB屏接入
+    lcddev.id=1;
 	if(lcddev.id!=0)
 	{
 		LTDC_Init();			    //ID非零,说明有RGB屏接入.

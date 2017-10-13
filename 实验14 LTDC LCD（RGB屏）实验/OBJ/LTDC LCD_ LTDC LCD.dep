@@ -1944,7 +1944,7 @@ I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h)(0x5710F96B)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h)(0x5710F96B)
 I (..\HALLIB\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h)(0x5710F96B)
 I (..\SYSTEM\delay\delay.h)(0x5710F96B)
-F (..\HARDWARE\LCD\lcd.c)(0x575F6FAC)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I..\CORE -I..\OBJ -I..\USER -I..\HALLIB\STM32F4xx_HAL_Driver\Inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\LCD -I..\HARDWARE\SDRAM -I..\HARDWARE\KEY-I "E:\Git_project_all\stm32f429bit6_LCD\实验14 LTDC LCD（RGB屏）实验\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx --C99-o ..\obj\lcd.o --omf_browse ..\obj\lcd.crf --depend ..\obj\lcd.d)
+F (..\HARDWARE\LCD\lcd.c)(0x59E0294C)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I..\CORE -I..\OBJ -I..\USER -I..\HALLIB\STM32F4xx_HAL_Driver\Inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\LCD -I..\HARDWARE\SDRAM -I..\HARDWARE\KEY-I "E:\Git_project_all\stm32f429bit6_LCD\实验14 LTDC LCD（RGB屏）实验\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx --C99-o ..\obj\lcd.o --omf_browse ..\obj\lcd.crf --depend ..\obj\lcd.d)
 I (..\HARDWARE\LCD\lcd.h)(0x5753C4ED)
 I (..\SYSTEM\sys\sys.h)(0x5745175C)
 I (..\USER\stm32f4xx.h)(0x5710F96C)
@@ -2022,7 +2022,7 @@ I (..\HARDWARE\LCD\font.h)(0x5710F96B)
 I (..\SYSTEM\usart\usart.h)(0x574909D0)
 I (..\SYSTEM\delay\delay.h)(0x5710F96B)
 I (..\HARDWARE\LCD\ltdc.h)(0x5710F96B)
-F (..\HARDWARE\SDRAM\sdram.c)(0x5753C5A2)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I..\CORE -I..\OBJ -I..\USER -I..\HALLIB\STM32F4xx_HAL_Driver\Inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\LCD -I..\HARDWARE\SDRAM -I..\HARDWARE\KEY-I "E:\Git_project_all\stm32f429bit6_LCD\实验14 LTDC LCD（RGB屏）实验\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx --C99-o ..\obj\sdram.o --omf_browse ..\obj\sdram.crf --depend ..\obj\sdram.d)
+F (..\HARDWARE\SDRAM\sdram.c)(0x59E02F98)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I..\CORE -I..\OBJ -I..\USER -I..\HALLIB\STM32F4xx_HAL_Driver\Inc -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\LCD -I..\HARDWARE\SDRAM -I..\HARDWARE\KEY-I "E:\Git_project_all\stm32f429bit6_LCD\实验14 LTDC LCD（RGB屏）实验\USER\RTE"-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="517" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx --C99-o ..\obj\sdram.o --omf_browse ..\obj\sdram.crf --depend ..\obj\sdram.d)
 I (..\HARDWARE\SDRAM\sdram.h)(0x5752924E)
 I (..\SYSTEM\sys\sys.h)(0x5745175C)
 I (..\USER\stm32f4xx.h)(0x5710F96C)
