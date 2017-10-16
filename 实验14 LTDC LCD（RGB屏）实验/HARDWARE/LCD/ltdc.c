@@ -362,7 +362,8 @@ void LTDC_Init(void)
 {   
 	u16 lcdid=0;
 	
-	lcdid=LTDC_PanelID_Read();			//读取LCD面板ID	
+//	lcdid=LTDC_PanelID_Read();			//读取LCD面板ID	
+    lcdid = 0X7016;
 	if(lcdid==0X4342)
 	{
 		lcdltdc.pwidth=480;			    //面板宽度,单位:像素

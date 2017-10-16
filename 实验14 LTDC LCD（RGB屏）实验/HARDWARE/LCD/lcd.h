@@ -36,8 +36,10 @@ extern u32  BACK_COLOR; //背景颜色.默认为白色
 
 //////////////////////////////////////////////////////////////////////////////////	 
 //-----------------MCU屏 LCD端口定义---------------- 
-//LCD背光	PB5	
-#define LCD_LED     PBout(5)   	    
+////LCD背光	PB5	
+//#define LCD_LED     PBout(5)   
+//LCD背光	PD13	
+#define LCD_LED     PDout(13)  
 //LCD地址结构体
 typedef struct
 {
