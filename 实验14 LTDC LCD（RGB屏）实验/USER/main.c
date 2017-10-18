@@ -23,7 +23,7 @@ int main(void)
     delay_init(180);                //初始化延时函数
     uart_init(115200);              //初始化USART
     LED_Init();                     //初始化LED 
-    KEY_Init();                     //初始化按键
+//    KEY_Init();                     //初始化按键
     SDRAM_Init();                   //SDRAM初始化
     LCD_Init();                     //LCD初始化
 	POINT_COLOR=RED; 
@@ -54,6 +54,6 @@ int main(void)
 	    x++;
 		if(x==12)x=0;      
 		LED0=!LED0;	 
-		delay_ms(1000);	
+		delay_ms(2000);	
 	}
 }

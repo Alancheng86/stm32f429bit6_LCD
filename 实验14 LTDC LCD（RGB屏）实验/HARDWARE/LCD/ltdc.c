@@ -392,12 +392,12 @@ void LTDC_Init(void)
 		lcdltdc.pwidth=1024;			//面板宽度,单位:像素
 		lcdltdc.pheight=600;			//面板高度,单位:像素
         lcdltdc.hsw=20;				    //水平同步宽度
-		lcdltdc.vsw=3;				    //垂直同步宽度
+		lcdltdc.vsw=4;				    //垂直同步宽度
 		lcdltdc.hbp=140;			    //水平后廊
 		lcdltdc.vbp=20;				    //垂直后廊
 		lcdltdc.hfp=160;			    //水平前廊
-		lcdltdc.vfp=12;				    //垂直前廊
-		LTDC_Clk_Set(360,2,RCC_PLLSAIDIVR_4);//设置像素时钟  45Mhz 
+		lcdltdc.vfp=22;				    //垂直前廊
+		LTDC_Clk_Set(360,6,RCC_PLLSAIDIVR_2);//设置像素时钟  45Mhz 
 		//其他参数待定.
 	}else if(lcdid==0X7018)		
 	{
