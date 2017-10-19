@@ -466,8 +466,10 @@ void HAL_LTDC_MspInit(LTDC_HandleTypeDef* hltdc)
     
     __HAL_RCC_LTDC_CLK_ENABLE();                //使能LTDC时钟
     __HAL_RCC_DMA2D_CLK_ENABLE();               //使能DMA2D时钟
+    __HAL_RCC_GPIOA_CLK_ENABLE();               //使能GPIOB时钟
     __HAL_RCC_GPIOB_CLK_ENABLE();               //使能GPIOB时钟
-    __HAL_RCC_GPIOF_CLK_ENABLE();               //使能GPIOF时钟
+    __HAL_RCC_GPIOC_CLK_ENABLE();               //使能GPIOB时钟
+//    __HAL_RCC_GPIOF_CLK_ENABLE();               //使能GPIOF时钟
 //    __HAL_RCC_GPIOG_CLK_ENABLE();               //使能GPIOG时钟
 //    __HAL_RCC_GPIOH_CLK_ENABLE();               //使能GPIOH时钟
     __HAL_RCC_GPIOI_CLK_ENABLE();               //使能GPIOI时钟
@@ -481,13 +483,34 @@ void HAL_LTDC_MspInit(LTDC_HandleTypeDef* hltdc)
 //    GPIO_Initure.Speed=GPIO_SPEED_HIGH;         //高速
 //    HAL_GPIO_Init(GPIOB,&GPIO_Initure);
     
+    //初始化PA15，
+    GPIO_Initure.Pin=GPIO_PIN_15;                //PA15
+    GPIO_Initure.Mode=GPIO_MODE_OUTPUT_PP;      //推挽输出
+    GPIO_Initure.Pull=GPIO_PULLUP;              //上拉        
+    GPIO_Initure.Speed=GPIO_SPEED_HIGH;         //高速
+    HAL_GPIO_Init(GPIOA,&GPIO_Initure);
+    
+    //初始化PB2，
+    GPIO_Initure.Pin=GPIO_PIN_2;                //PB2
+    GPIO_Initure.Mode=GPIO_MODE_OUTPUT_PP;      //推挽输出
+    GPIO_Initure.Pull=GPIO_PULLUP;              //上拉        
+    GPIO_Initure.Speed=GPIO_SPEED_HIGH;         //高速
+    HAL_GPIO_Init(GPIOB,&GPIO_Initure);
+    
+    //初始化PC13，
+    GPIO_Initure.Pin=GPIO_PIN_13;                //PC13
+    GPIO_Initure.Mode=GPIO_MODE_OUTPUT_PP;      //推挽输出
+    GPIO_Initure.Pull=GPIO_PULLUP;              //上拉        
+    GPIO_Initure.Speed=GPIO_SPEED_HIGH;         //高速
+    HAL_GPIO_Init(GPIOC,&GPIO_Initure);
+    
     //初始化PF10
-    GPIO_Initure.Pin=GPIO_PIN_10; 
+//    GPIO_Initure.Pin=GPIO_PIN_10; 
     GPIO_Initure.Mode=GPIO_MODE_AF_PP;          //复用
     GPIO_Initure.Pull=GPIO_NOPULL;              
     GPIO_Initure.Speed=GPIO_SPEED_HIGH;         //高速
     GPIO_Initure.Alternate=GPIO_AF14_LTDC;      //复用为LTDC
-    HAL_GPIO_Init(GPIOF,&GPIO_Initure);
+//    HAL_GPIO_Init(GPIOF,&GPIO_Initure);
     
 //    //初始化PG6,7,11
 //    GPIO_Initure.Pin=GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_11;

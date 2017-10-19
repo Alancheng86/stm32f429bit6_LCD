@@ -18,12 +18,13 @@
 int main(void)
 {
     u8 x=0;
+    u16 i=0;
   	u8 lcd_id[12];
     Stm32_Clock_Init(360,25,2,8);   //设置时钟,180Mhz
     delay_init(180);                //初始化延时函数
     uart_init(115200);              //初始化USART
     LED_Init();                     //初始化LED 
-//    KEY_Init();                     //初始化按键
+    KEY_Init();                     //初始化按键
     SDRAM_Init();                   //SDRAM初始化
     LCD_Init();                     //LCD初始化
 	POINT_COLOR=RED; 
@@ -36,7 +37,7 @@ int main(void)
 			case 1:LCD_Clear(BLACK);break;
 			case 2:LCD_Clear(BLUE);break;
 			case 3:LCD_Clear(RED);break;
-			case 4:LCD_Clear(MAGENTA);break;
+			case 4:LCD_Fill(100,100,1022,598,MAGENTA);break;
 			case 5:LCD_Clear(GREEN);break;
 			case 6:LCD_Clear(CYAN);break; 
 			case 7:LCD_Clear(YELLOW);break;
@@ -50,9 +51,10 @@ int main(void)
 		LCD_ShowString(10,80,240,24,24,"LTDC TEST");
 		LCD_ShowString(10,110,240,16,16,"ATOM@ALIENTEK");
  		LCD_ShowString(10,130,240,16,16,lcd_id);		//显示LCD ID	      					 
-		LCD_ShowString(10,150,240,12,12,"2016/1/6");	      					 
+		LCD_ShowString(10,150,240,12,12,"2016/1/6");	
+for(i=0;i<1500;i++){    LCD_ShowString(10,250,1014,12,24,"1232143567890!@#$%^&*qwertyuiopasdfghjklzxcvbnm");    }        
 	    x++;
-        x=5;
+//        x=5;
 		if(x==12)x=0;      
 		LED0=!LED0;	 
 		delay_ms(2000);	

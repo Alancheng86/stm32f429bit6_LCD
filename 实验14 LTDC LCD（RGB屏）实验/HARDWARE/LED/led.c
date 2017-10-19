@@ -17,23 +17,35 @@
 void LED_Init(void)
 {
     GPIO_InitTypeDef GPIO_Initure;
-    __HAL_RCC_GPIOB_CLK_ENABLE();           //开启GPIOB时钟
-    __HAL_RCC_GPIOD_CLK_ENABLE();           //开启GPIOB时钟
+//    __HAL_RCC_GPIOB_CLK_ENABLE();           //开启GPIOB时钟
+    __HAL_RCC_GPIOD_CLK_ENABLE();           //开启GPIOD时钟
+    __HAL_RCC_GPIOG_CLK_ENABLE();           //开启GPIOB时钟
 	
-    GPIO_Initure.Pin=GPIO_PIN_0|GPIO_PIN_1; //PB1,0
+//    GPIO_Initure.Pin=GPIO_PIN_0|GPIO_PIN_1; //PB1,0
+//    GPIO_Initure.Mode=GPIO_MODE_OUTPUT_PP;  //推挽输出
+//    GPIO_Initure.Pull=GPIO_PULLUP;          //上拉
+//    GPIO_Initure.Speed=GPIO_SPEED_HIGH;     //高速
+//    HAL_GPIO_Init(GPIOB,&GPIO_Initure);
+    
+    GPIO_Initure.Pin=GPIO_PIN_7; //PG7
     GPIO_Initure.Mode=GPIO_MODE_OUTPUT_PP;  //推挽输出
     GPIO_Initure.Pull=GPIO_PULLUP;          //上拉
     GPIO_Initure.Speed=GPIO_SPEED_HIGH;     //高速
-    HAL_GPIO_Init(GPIOB,&GPIO_Initure);
+    HAL_GPIO_Init(GPIOG,&GPIO_Initure);
     
-    GPIO_Initure.Pin=GPIO_PIN_13; //PD13
+    GPIO_Initure.Pin=GPIO_PIN_13|GPIO_PIN_12; //PD13   |  PD12
     GPIO_Initure.Mode=GPIO_MODE_OUTPUT_PP;  //推挽输出
     GPIO_Initure.Pull=GPIO_PULLUP;          //上拉
     GPIO_Initure.Speed=GPIO_SPEED_HIGH;     //高速
     HAL_GPIO_Init(GPIOD,&GPIO_Initure);
 	
-    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_SET);	//PB0置1 
-    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_SET);	//PB1置1  
+//    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_SET);	//PB0置1 
+//    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_SET);	//PB1置1  
+    HAL_GPIO_WritePin(GPIOG,GPIO_PIN_7,GPIO_PIN_SET);	//PG7=1   黄绿LED
+    HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_SET);	//PD12=1   蓝色led
+    
+//    HAL_GPIO_WritePin(GPIOG,GPIO_PIN_7,GPIO_PIN_RESET);	//PG7=0   黄绿LED
+//    HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_RESET);	//PD12=0   蓝色led
     
     HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_SET);	//PB1置1  
 }

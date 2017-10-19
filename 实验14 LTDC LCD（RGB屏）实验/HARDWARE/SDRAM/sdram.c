@@ -68,7 +68,7 @@ void SDRAM_Initialization_Sequence(SDRAM_HandleTypeDef *hsdram)
 	  //COUNT=SDRAM刷新周期/行数-20=SDRAM刷新周期(us)*SDCLK频率(Mhz)/行数
     //我们使用的SDRAM刷新周期为64ms,SDCLK=180/2=90Mhz,行数为8192(2^13).
 	  //所以,COUNT=64*1000*90/8192-20=683
-	HAL_SDRAM_ProgramRefreshRate(&SDRAM_Handler,683);
+	HAL_SDRAM_ProgramRefreshRate(&SDRAM_Handler,1386);////683
 
 }
 //SDRAM底层驱动，引脚配置，时钟使能
@@ -144,8 +144,8 @@ u8 SDRAM_Send_Cmd(u8 bankx,u8 cmd,u8 refresh,u16 regval)
     u32 target_bank=0;
     FMC_SDRAM_CommandTypeDef Command;
     
-    if(bankx==0) target_bank=FMC_SDRAM_CMD_TARGET_BANK1;       
-    else if(bankx==1) target_bank=FMC_SDRAM_CMD_TARGET_BANK2;   
+    if(bankx==1) target_bank=FMC_SDRAM_CMD_TARGET_BANK1;       
+    else if(bankx==0) target_bank=FMC_SDRAM_CMD_TARGET_BANK2;   
     Command.CommandMode=cmd;                //命令
     Command.CommandTarget=target_bank;      //目标SDRAM存储区域
     Command.AutoRefreshNumber=refresh;      //自刷新次数
