@@ -52,6 +52,7 @@ int main(void)
  		LCD_ShowString(10,130,240,16,16,lcd_id);		//œ‘ æLCD ID	      					 
 		LCD_ShowString(10,150,240,12,12,"2016/1/6");	      					 
 	    x++;
+        x=5;
 		if(x==12)x=0;      
 		LED0=!LED0;	 
 		delay_ms(2000);	

@@ -48,6 +48,7 @@ typedef struct
 } LCD_TypeDef;
 //使用NOR/SRAM的 Bank1.sector4,地址位HADDR[27,26]=11 A18作为数据命令区分线 
 //注意设置时STM32内部会右移一位对其!  			    
+//#define LCD_BASE        ((u32)(0x60000000 | 0x0007FFFE))
 #define LCD_BASE        ((u32)(0x60000000 | 0x0007FFFE))
 #define LCD             ((LCD_TypeDef *) LCD_BASE)
 //////////////////////////////////////////////////////////////////////////////////
@@ -119,18 +120,31 @@ void LCD_WriteRAM(u16 RGB_Code);
 void LCD_SSD_BackLightSet(u8 pwm);							//SSD1963 背光控制
 void LCD_Scan_Dir(u8 dir);									//设置屏扫描方向
 void LCD_Display_Dir(u8 dir);								//设置屏幕显示方向
-void LCD_Set_Window(u16 sx,u16 sy,u16 width,u16 height);	//设置窗口					   						   																			 
+void LCD_Set_Window(u16 sx,u16 sy,u16 width,u16 height);	//设置窗口	
+
 //LCD分辨率设置
-#define SSD_HOR_RESOLUTION		800		//LCD水平分辨率
-#define SSD_VER_RESOLUTION		480		//LCD垂直分辨率
+#define SSD_HOR_RESOLUTION		1024		//LCD水平分辨率
+#define SSD_VER_RESOLUTION		600		//LCD垂直分辨率
 //LCD驱动参数设置
-#define SSD_HOR_PULSE_WIDTH		1		//水平脉宽
+#define SSD_HOR_PULSE_WIDTH		10		//水平脉宽
 #define SSD_HOR_BACK_PORCH		46		//水平前廊
 #define SSD_HOR_FRONT_PORCH		210		//水平后廊
 
-#define SSD_VER_PULSE_WIDTH		1		//垂直脉宽
+#define SSD_VER_PULSE_WIDTH		4		//垂直脉宽
 #define SSD_VER_BACK_PORCH		23		//垂直前廊
 #define SSD_VER_FRONT_PORCH		22		//垂直前廊
+
+////LCD分辨率设置
+//#define SSD_HOR_RESOLUTION		800		//LCD水平分辨率
+//#define SSD_VER_RESOLUTION		480		//LCD垂直分辨率
+////LCD驱动参数设置
+//#define SSD_HOR_PULSE_WIDTH		1		//水平脉宽
+//#define SSD_HOR_BACK_PORCH		46		//水平前廊
+//#define SSD_HOR_FRONT_PORCH		210		//水平后廊
+
+//#define SSD_VER_PULSE_WIDTH		1		//垂直脉宽
+//#define SSD_VER_BACK_PORCH		23		//垂直前廊
+//#define SSD_VER_FRONT_PORCH		22		//垂直前廊
 //如下几个参数，自动计算
 #define SSD_HT	(SSD_HOR_RESOLUTION+SSD_HOR_BACK_PORCH+SSD_HOR_FRONT_PORCH)
 #define SSD_HPS	(SSD_HOR_BACK_PORCH)

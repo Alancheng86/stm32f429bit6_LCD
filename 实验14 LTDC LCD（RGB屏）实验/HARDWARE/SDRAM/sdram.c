@@ -17,11 +17,12 @@ SDRAM_HandleTypeDef SDRAM_Handler;   //SDRAM句柄
 //SDRAM初始化
 void SDRAM_Init(void)
 {
-
+//    HAL_SDRAM_MspInit(&SDRAM_Handler);
+    
     FMC_SDRAM_TimingTypeDef SDRAM_Timing;
                                                      
     SDRAM_Handler.Instance=FMC_SDRAM_DEVICE;                             //SDRAM在BANK5,6  
-    SDRAM_Handler.Init.SDBank=FMC_SDRAM_BANK1;                           //SDRAM接在BANK5上
+    SDRAM_Handler.Init.SDBank=FMC_SDRAM_BANK2;                           //SDRAM接在BANK5上
     SDRAM_Handler.Init.ColumnBitsNumber=FMC_SDRAM_COLUMN_BITS_NUM_8;     //列数量
     SDRAM_Handler.Init.RowBitsNumber=FMC_SDRAM_ROW_BITS_NUM_12;          //行数量
     SDRAM_Handler.Init.MemoryDataWidth=FMC_SDRAM_MEM_BUS_WIDTH_32;       //数据宽度为16位
@@ -33,9 +34,9 @@ void SDRAM_Init(void)
     SDRAM_Handler.Init.ReadPipeDelay=FMC_SDRAM_RPIPE_DELAY_1;            //读通道延时
     
     SDRAM_Timing.LoadToActiveDelay=2;                                   //加载模式寄存器到激活时间的延迟为2个时钟周期
-    SDRAM_Timing.ExitSelfRefreshDelay=8;                                //退出自刷新延迟为8个时钟周期
-    SDRAM_Timing.SelfRefreshTime=6;                                     //自刷新时间为6个时钟周期                                 
-    SDRAM_Timing.RowCycleDelay=6;                                       //行循环延迟为6个时钟周期
+    SDRAM_Timing.ExitSelfRefreshDelay=7;                                //退出自刷新延迟为8个时钟周期
+    SDRAM_Timing.SelfRefreshTime=4;                                     //自刷新时间为6个时钟周期                                 
+    SDRAM_Timing.RowCycleDelay=7;                                       //行循环延迟为6个时钟周期
     SDRAM_Timing.WriteRecoveryTime=2;                                   //恢复延迟为2个时钟周期
     SDRAM_Timing.RPDelay=2;                                             //行预充电延迟为2个时钟周期
     SDRAM_Timing.RCDDelay=2;                                            //行到列延迟为2个时钟周期

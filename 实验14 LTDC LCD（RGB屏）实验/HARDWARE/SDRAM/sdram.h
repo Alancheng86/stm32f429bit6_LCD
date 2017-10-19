@@ -14,7 +14,7 @@
 //All rights reserved									  
 ////////////////////////////////////////////////////////////////////////////////// 	
 extern SDRAM_HandleTypeDef SDRAM_Handler;//SDRAM句柄
-#define Bank5_SDRAM_ADDR    ((u32)(0XC0000000)) //SDRAM开始地址
+#define Bank5_SDRAM_ADDR    ((u32)(0XD0000000)) //SDRAM开始地址
 
 //SDRAM配置参数
 #define SDRAM_MODEREG_BURST_LENGTH_1             ((u16)0x0000)

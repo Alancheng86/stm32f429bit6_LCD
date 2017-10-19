@@ -50,10 +50,11 @@ extern DMA2D_HandleTypeDef DMA2D_Handler;   //DMA2D句柄
 
 //定义颜色像素格式,一般用RGB565
 #define LCD_PIXFORMAT				LCD_PIXEL_FORMAT_RGB565	
+//#define LCD_PIXFORMAT               LCD_PIXEL_FORMAT_RGB888
 //定义默认背景层颜色
 #define LTDC_BACKLAYERCOLOR			0X00000000	
 //LCD帧缓冲区首地址,这里定义在SDRAM里面.
-#define LCD_FRAME_BUF_ADDR			0XC0000000  
+#define LCD_FRAME_BUF_ADDR			0XD0000000  
 
 void LTDC_Switch(u8 sw);					//LTDC开关
 void LTDC_Layer_Switch(u8 layerx,u8 sw);	//层开关
